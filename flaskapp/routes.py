@@ -2,7 +2,7 @@ from flask import render_template, url_for, flash, redirect, request
 from flask.globals import request
 from flaskapp import app
 from flaskapp.forms import QuestionForms
-# from flaskblog.models import
+from flaskapp.models import User, Questions
 
 
 @app.route("/")
