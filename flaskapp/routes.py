@@ -1,7 +1,7 @@
 from flask import render_template, url_for, flash, redirect, request
 from flask.globals import request
 from flaskapp import app
-from flaskapp.forms import QuestionForms
+from flaskapp.forms import QuestionForms, QuestionCreaterForm
 from flaskapp.models import User, Questions
 
 
@@ -40,3 +40,13 @@ def results():
         correct += 1
 
     return render_template('results.html', correct=correct)
+
+
+@app.route("/newquestions", methods=['GET', 'POST'])
+def new_questions():
+    form = QuestionCreaterForm()
+    if form.validate_on_submit():
+        flash('You entered the data successfully into the database!', 'success')
+        return redirect(url_for('new_questions'))
+
+    return render_template('new_questions.html', title="New Questions", form=form)

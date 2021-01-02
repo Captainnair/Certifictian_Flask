@@ -22,4 +22,4 @@ class Questions(db.Model):
     answer = db.Column(db.String(), nullable=False)
 
     def __repr__(self):
-        return f"User('{self.id}', '{self.question}', '{self.answer}')"
+        return f"Questions('{self.id}', '{self.question}', '{self.answer}')"
