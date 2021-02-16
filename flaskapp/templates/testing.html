@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="{{url_for('results')}}">
+        <fieldset class="form-group">
+
+            <div class=" form-group container mt-5 border p-3">
+            {{ form.hidden_tag() }}
+            {{ form.q11.label(class="form-control-label") }} <br>
+            {% for subfield in form.q11 %}
+                <tr>
+                    <td>{{ subfield }}</td>
+                    <td>{{ subfield.label }}</td>
+                </tr>
+                <br>
+            {% endfor %}
+            </ul>
+        </div>
+
+            <div class=" form-group container mt-5 border p-3">
+            {{ form.hidden_tag() }}
+            {{ form.q22.label(class="form-control-label") }} <br>
+            {% for subfield in form.q22 %}
+                <tr>
+                    <td>{{ subfield }}</td>
+                    <td>{{ subfield.label }}</td>
+                </tr>
+                <br>
+            {% endfor %}
+            </ul>
+        </div>
+
+
+        </fieldset>
+        <div class="form-group container mt-3 border p-3">
+        {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+
+{% endblock %}

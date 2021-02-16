@@ -1,7 +1,7 @@
 from flask import render_template, url_for, flash, redirect, request
 from flask.globals import request
 from flaskapp import app, db
-from flaskapp.forms import QuestionForms, QuestionCreaterForm
+from flaskapp.forms import Question, QuestionCreaterForm, AnotherQuestionsForm, qs1, qs2
 from flaskapp.models import User, Questions
 
 
@@ -11,20 +11,8 @@ def home():
     return render_template('home.html')
 
 
-@app.route("/questions", methods=["GET", "POST"])
-def questions():
-    form = QuestionForms()
-    if form.validate_on_submit():
-        return redirect(url_for('results'))
-
-    return render_template('questions.html', form=form)
-
-
-
-
-@app.route("/results", methods=["GET", "POST"])
-def results():
-
+@app.route("/qresults",  methods=["GET", "POST"])
+def questions_results():
     correct = 0
     q1 = request.form['q1']
     q2 = request.form['q2']
@@ -39,7 +27,96 @@ def results():
     if q4 == 'open':
         correct += 1
 
-    return render_template('results.html', correct=correct)
+    return render_template('questions_results.html', correct=correct)
+
+
+@app.route("/menu", methods=["GET", "POST"])
+def menu():
+    return render_template('menu.html')
+
+@app.route("/qs1", methods=["GET", "POST"])
+def question_set_1():
+    global formqsr1
+    formqsr1 = qs1()
+    if formqsr1.validate_on_submit():
+        return redirect(url_for('question_set_results_1'))
+    return render_template('qs1.html', form=formqsr1)
+
+
+@app.route("/qs2", methods=["GET", "POST"])
+def question_set_2():
+    global formqsr2
+    formqsr2 = qs2()
+    if formqsr2.validate_on_submit():
+        return redirect(url_for('question_set_results_2'))
+    return render_template('qs2.html', form=formqsr2)
+
+@app.route("/qsr1", methods=["GET", "POST"])
+def question_set_results_1():
+    form = formqsr1
+    quest = Questions.query.all()
+    correct = 0
+    q1 = request.form['q11']
+    q2 = request.form['q12']
+    q3 = request.form['q13']
+    q4 = request.form['q14']
+    q5 = request.form['q15']
+    if q1 == quest[0].answer:
+        correct += 1
+    if q2 == quest[1].answer:
+        correct += 1
+    if q3 == quest[2].answer:
+        correct += 1
+    if q4 == quest[3].answer:
+        correct += 1
+    if q5 == quest[4].answer:
+        correct += 1
+    return render_template('qsr1.html', correct=correct)
+
+
+@app.route("/qsr2", methods=["GET", "POST"])
+def question_set_results_2():
+    form = formqsr2
+    correct = 0
+    quest = Questions.query.all()
+    q1 = request.form['q21']
+    q2 = request.form['q22']
+    q3 = request.form['q23']
+    q4 = request.form['q24']
+    q5 = request.form['q25']
+    if q1 == quest[5].answer:
+        correct += 1
+    if q2 == quest[6].answer:
+        correct += 1
+    if q3 == quest[7].answer:
+        correct += 1
+    if q4 == quest[8].answer:
+        correct += 1
+    if q5 == quest[9].answer:
+        correct += 1
+    return render_template('qsr2.html', correct=correct)
+
+
+
+
+
+@app.route("/questions", methods=["GET", "POST"])
+def questions():
+    form = Question()
+    if form.validate_on_submit():
+        return redirect(url_for('questions_results'))
+
+    return render_template('questions.html', form=form)
+
+
+
+
+@app.route("/results", methods=["GET", "POST"])
+def results():
+    form = form1
+    q1 = request.form['q11']
+    q2 = request.form['q22']
+    return render_template('results.html')
 
 
 @app.route("/newquestions", methods=['GET', 'POST'])
@@ -54,3 +131,22 @@ def new_questions():
         return redirect(url_for('new_questions'))
 
     return render_template('new_questions.html', title="New Questions", form=form)
+
+@app.route("/testing", methods=['GET', 'POST'])
+def testing():
+    # global correct
+    # correct = 0
+    global form1
+    ques = Questions.query.all()
+    form1 = AnotherQuestionsForm()
+    if form1.validate_on_submit():
+        q1 = form1.q1.data
+        q2 = form1.q2.data
+        ques = Questions.query.all()
+        # if q1 == ques.answer:
+        #
+        # if q2 == ques[1]:
+        #     correct += 1
+
+        return redirect(url_for('results'))
+    return render_template('testing.html', form=form1)
