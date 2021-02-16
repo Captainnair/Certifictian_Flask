@@ -18,68 +18,68 @@
                 {% endif %}
             </div>
             <div class="form-group">
-                {{ form.choice1.label(class="form-control-label") }}
-                {% if form.choice1.errors %}
-                    {{ form.choice1(class="form-control form-control-lg is-invalid") }}
+                {{ form.choice_1.label(class="form-control-label") }}
+                {% if form.choice_1.errors %}
+                    {{ form.choice_1(class="form-control form-control-lg is-invalid") }}
                     <div class="invalid-feedback">
-                        {% for error in form.choice1.errors %}
+                        {% for error in form.choice_1.errors %}
                             <span>{{ error }}</span>
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.choice1(class="form-control form-control-lg") }}
+                    {{ form.choice_1(class="form-control form-control-lg") }}
                 {% endif %}
             </div>
             <div class="form-group">
-                {{ form.choice2.label(class="form-control-label") }}
-                {% if form.choice2.errors %}
-                    {{ form.choice2(class="form-control form-control-lg is-invalid") }}
+                {{ form.choice_2.label(class="form-control-label") }}
+                {% if form.choice_2.errors %}
+                    {{ form.choice_2(class="form-control form-control-lg is-invalid") }}
                     <div class="invalid-feedback">
-                        {% for error in form.choice2.errors %}
+                        {% for error in form.choice_2.errors %}
                             <span>{{ error }}</span>
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.choice2(class="form-control form-control-lg") }}
+                    {{ form.choice_2(class="form-control form-control-lg") }}
                 {% endif %}
             </div>
             <div class="form-group">
-                {{ form.choice3.label(class="form-control-label") }}
-                {% if form.choice3.errors %}
-                    {{ form.choice3(class="form-control form-control-lg is-invalid") }}
+                {{ form.choice_3.label(class="form-control-label") }}
+                {% if form.choice_3.errors %}
+                    {{ form.choice_3(class="form-control form-control-lg is-invalid") }}
                     <div class="invalid-feedback">
-                        {% for error in form.choice3.errors %}
+                        {% for error in form.choice_3.errors %}
                             <span>{{ error }}</span>
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.choice3(class="form-control form-control-lg") }}
+                    {{ form.choice_3(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+            <div class="form-group">_
+                {{ form.choice_4.label(class="form-control-label") }}
+                {% if form.choice_4.errors %}
+                    {{ form.choice_4(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.choice_4.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.choice_4(class="form-control form-control-lg") }}
                 {% endif %}
             </div>
             <div class="form-group">
-                {{ form.choice4.label(class="form-control-label") }}
-                {% if form.choice4.errors %}
-                    {{ form.choice4(class="form-control form-control-lg is-invalid") }}
+                {{ form.answer_1.label(class="form-control-label") }}
+                {% if form.answer_1.errors %}
+                    {{ form.answer_1(class="form-control form-control-lg is-invalid") }}
                     <div class="invalid-feedback">
-                        {% for error in form.choice4.errors %}
+                        {% for error in form.answer_1.errors %}
                             <span>{{ error }}</span>
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.choice4(class="form-control form-control-lg") }}
-                {% endif %}
-            </div>
-            <div class="form-group">
-                {{ form.answer.label(class="form-control-label") }}
-                {% if form.answer.errors %}
-                    {{ form.answer(class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.answer.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.answer(class="form-control form-control-lg") }}
+                    {{ form.answer_1(class="form-control form-control-lg") }}
                 {% endif %}
             </div>
         </fieldset>

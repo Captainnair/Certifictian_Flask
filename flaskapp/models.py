@@ -21,5 +21,3 @@ class Questions(db.Model):
     choice4 = db.Column(db.String(), nullable=False)
     answer = db.Column(db.String(), nullable=False)
 
-    def __repr__(self):
-        return f"Questions('{self.id}', '{self.question}', '{self.answer}')"
