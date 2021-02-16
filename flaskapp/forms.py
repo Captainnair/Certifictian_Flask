@@ -29,3 +29,15 @@ class QuestionForms(FieldsRequiredForm):
     text = StringField("Test", validators=[])
     submit = SubmitField('Check you Answers')
 
+
+class QuestionCreaterForm(FlaskForm):
+    question = TextAreaField('Enter the question:', validators=[DataRequired()])
+    choice1 = StringField('Enter the 1st choice:', validators=[DataRequired()])
+    choice2 = StringField('Enter the 2nd choice:', validators=[DataRequired()])
+    choice3 = StringField('Enter the 3rd choice:', validators=[DataRequired()])
+    choice4 = StringField('Enter the 4th choice:', validators=[DataRequired()])
+    answer = StringField('Enter the correct answer:', validators=[DataRequired()])
+    submit = SubmitField('Enter Into the Database')
+
+
+
