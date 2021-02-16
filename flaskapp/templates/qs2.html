@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST" action="{{url_for('question_set_results_2')}}">
+    <fieldset class="form-group">
+        <div class=" form-group container mt-5 border p-3">
+            {{ form.hidden_tag() }}
+            {{ form.q21.label(class="form-control-label") }} <br>
+            {% for subfield in form.q21 %}
+                <tr>
+                    <td>{{ subfield }}</td>
+                    <td>{{ subfield.label }}</td>
+                </tr>
+                <br>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="form-group container mt-3 border p-3">
+            {{ form.q22.label(class="form-control-label") }} <br>
+            {% for subfield in form.q22 %}
+                <tr>
+                    <td>{{ subfield }}</td>
+                    <td>{{ subfield.label }}</td>
+                </tr>
+                <br>
+            {% endfor %}
+        </div>
+        <div class="form-group  container mt-3 border p-3">
+            {{ form.q23.label(class="form-control-label") }} <br>
+            {% for subfield in form.q23 %}
+                <tr>
+                    <td>{{ subfield }}</td>
+                    <td>{{ subfield.label }}</td>
+                </tr>
+                <br>
+            {% endfor %}
+        </div>
+        <div class="form-group  container border p-3 mt-3">
+            {{ form.q24.label(class="form-control-label") }} <br>
+            {% for subfield in form.q24 %}
+                <tr>
+                    <td>{{ subfield }}</td>
+                    <td>{{ subfield.label }}</td>
+                </tr>
+                <br>
+            {% endfor %}
+        </div>
+        <div class="form-group  container border p-3 mt-3">
+            {{ form.q25.label(class="form-control-label") }} <br>
+            {% for subfield in form.q25 %}
+                <tr>
+                    <td>{{ subfield }}</td>
+                    <td>{{ subfield.label }}</td>
+                </tr>
+                <br>
+            {% endfor %}
+        </div>
+    </fieldset>
+    <div class="form-group container mt-3 border p-3">
+        {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+</form>
+{% endblock %}

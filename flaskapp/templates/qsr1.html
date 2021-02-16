@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="mt-5 container mx-auto" style="text-align:center">
+        <h1> Your total score is:</h1><br>
+        <h2> {{correct}} / 5</h2><br><br>
+        <a class="btn btn-info" href="{{url_for('question_set_1')}}">Try Again</a>
+    </div>
+{% endblock %}
