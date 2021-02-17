@@ -5,4 +5,362 @@
         <h2> {{correct}} / 5</h2><br><br>
         <a class="btn btn-info" href="{{url_for('question_set_1')}}">Try Again</a>
     </div>
+    <div class="form-group container mt-3 border p-3">
+        <label class="form-control-label"> What Year was the coronavirus discovered?</label>
+        <div class="form-check mt-3">
+            {% if wrong == 1 %}
+                <div class="alert alert-danger" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                    <label class="form-check-label">
+                     2018
+                     </label>
+                </div>
+            {% else %}
+                <div class="p-3">
+                    <input class="form-check-input" type="radio" disabled>
+                    <label class="form-check-label">
+                     2018
+                     </label>
+                </div>
+            {% endif %}
+            {% if wrong == 2%}
+                <div class="alert alert-danger" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                    <label class="form-check-label">
+                     2020
+                     </label>
+                </div>
+            {% else %}
+                <div class="p-3">
+                    <input class="form-check-input" type="radio" disabled>
+                    <label class="form-check-label">
+                     2020
+                     </label>
+                </div>
+            {% endif %}
+            <div class="alert alert-success" role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                  <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                </svg>
+                <label class="form-check-label">
+                 2019
+                 </label>
+            </div>
+            {% if wrong == 3 %}
+                <div class="alert alert-danger" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                    <label class="form-check-label">
+                     2017
+                     </label>
+                </div>
+            {% else %}
+                <div class="p-3">
+                    <input class="form-check-input" type="radio" disabled>
+                    <label class="form-check-label">
+                     2017
+                     </label>
+                </div>
+            {% endif %}
+
+            {%if wrong == 0%}
+
+            {% else %}
+                 __________________________________________________________________________________________________________________________________
+                <label class="ml-3">*While the coronavirus started to takeover in 2020 the first recorded case was in 2019</label>
+            {% endif %}
+        </div>
+
+    </div>
+        <div class="form-group container mt-3 border p-3">
+            <label class="form-control-label"> How many items are in a baker's dozen?</label>
+            <div class="form-check mt-3">
+                {% if wrong2 == 1 %}
+                    <div class="alert alert-danger" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        <label class="form-check-label">
+                         6
+                         </label>
+                    </div>
+                {% else %}
+                    <div class="p-3">
+                        <input class="form-check-input" type="radio" disabled>
+                        <label class="form-check-label">
+                         6
+                         </label>
+                    </div>
+                {% endif %}
+                <div class="alert alert-success" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    <label class="form-check-label">
+                     13
+                     </label>
+                </div>
+                {% if wrong2 == 2%}
+                    <div class="alert alert-danger" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        <label class="form-check-label">
+                         12
+                         </label>
+                    </div>
+                {% else %}
+                    <div class="p-3">
+                        <input class="form-check-input" type="radio" disabled>
+                        <label class="form-check-label">
+                         12
+                         </label>
+                    </div>
+                {% endif %}
+                {% if wrong2 == 3 %}
+                    <div class="alert alert-danger" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        <label class="form-check-label">
+                         14
+                         </label>
+                    </div>
+                {% else %}
+                    <div class="p-3">
+                        <input class="form-check-input" type="radio" disabled>
+                        <label class="form-check-label">
+                         14
+                         </label>
+                    </div>
+                {% endif %}
+
+                {%if wrong2 == 0%}
+
+                {% else %}
+                     __________________________________________________________________________________________________________________________________
+                    <label class="ml-3">*A Bakers Dozen is known as to be 13 while the regular dozen is 12</label>
+                {% endif %}
+            </div>
+            </div>
+
+        <div class="form-group container mt-3 border p-3">
+            <label class="form-control-label"> What is the capital of Japan?</label>
+            <div class="form-check mt-3">
+                <div class="alert alert-success" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    <label class="form-check-label">
+                     Tokyo
+                     </label>
+                </div>
+                {% if wrong3 == 1 %}
+                    <div class="alert alert-danger" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        <label class="form-check-label">
+                         Hiroshima
+                         </label>
+                    </div>
+                {% else %}
+                    <div class="p-3">
+                        <input class="form-check-input" type="radio" disabled>
+                        <label class="form-check-label">
+                         Hiroshima
+                         </label>
+                    </div>
+                {% endif %}
+                {% if wrong3 == 2%}
+                    <div class="alert alert-danger" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        <label class="form-check-label">
+                         Kyoto
+                         </label>
+                    </div>
+                {% else %}
+                    <div class="p-3">
+                        <input class="form-check-input" type="radio" disabled>
+                        <label class="form-check-label">
+                         Kyoto
+                         </label>
+                    </div>
+                {% endif %}
+                {% if wrong3 == 3 %}
+                    <div class="alert alert-danger" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        <label class="form-check-label">
+                         Beijing
+                         </label>
+                    </div>
+                {% else %}
+                    <div class="p-3">
+                        <input class="form-check-input" type="radio" disabled>
+                        <label class="form-check-label">
+                         Beijing
+                         </label>
+                    </div>
+                {% endif %}
+
+                {%if wrong3 == 0%}
+
+                {% else %}
+                     __________________________________________________________________________________________________________________________________
+                    <label class="ml-3">*The capital of Japan is Tokyo!</label>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="form-group container mt-3 border p-3">
+            <label class="form-control-label"> What is the technical name of a hashtag? </label>
+            <div class="form-check mt-3">
+                {% if wrong4 == 1 %}
+                    <div class="alert alert-danger" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        <label class="form-check-label">
+                         Pound Sign
+                         </label>
+                    </div>
+                {% else %}
+                    <div class="p-3">
+                        <input class="form-check-input" type="radio" disabled>
+                        <label class="form-check-label">
+                         Pound Sign
+                         </label>
+                    </div>
+                {% endif %}
+                {% if wrong4 == 2%}
+                    <div class="alert alert-danger" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        <label class="form-check-label">
+                         Four-line
+                         </label>
+                    </div>
+                {% else %}
+                    <div class="p-3">
+                        <input class="form-check-input" type="radio" disabled>
+                        <label class="form-check-label">
+                         Four-line
+                         </label>
+                    </div>
+                {% endif %}
+                {% if wrong4 == 3 %}
+                    <div class="alert alert-danger" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        <label class="form-check-label">
+                         Asterisk
+                         </label>
+                    </div>
+                {% else %}
+                    <div class="p-3">
+                        <input class="form-check-input" type="radio" disabled>
+                        <label class="form-check-label">
+                         Asterisk
+                         </label>
+                    </div>
+                <div class="alert alert-success" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    <label class="form-check-label">
+                     Octothorpe
+                     </label>
+                </div>
+                {% endif %}
+
+                {%if wrong4 == 0%}
+
+                {% else %}
+                     __________________________________________________________________________________________________________________________________
+                    <label class="ml-3">*While pound sign is another name for the hastag the offical name is the octothorpe</label>
+                {% endif %}
+            </div>
+        </div>
+        <div class="form-group container mt-3 border p-3">
+        <label class="form-control-label"> What causes bubbles to pop when they are in the air?</label>
+        <div class="form-check mt-3">
+            {% if wrong5 == 1 %}
+                <div class="alert alert-danger" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                    <label class="form-check-label">
+                     Air Pressure
+                     </label>
+                </div>
+            {% else %}
+                <div class="p-3">
+                    <input class="form-check-input" type="radio" disabled>
+                    <label class="form-check-label">
+                     Air Pressure
+                     </label>
+                </div>
+            {% endif %}
+            {% if wrong5 == 2%}
+                <div class="alert alert-danger" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                    <label class="form-check-label">
+                     Gravity
+                     </label>
+                </div>
+            {% else %}
+                <div class="p-3">
+                    <input class="form-check-input" type="radio" disabled>
+                    <label class="form-check-label">
+                     Gravity
+                     </label>
+                </div>
+            {% endif %}
+            <div class="alert alert-success" role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                  <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                </svg>
+                <label class="form-check-label">
+                 Particles in the air
+                 </label>
+            </div>
+            {% if wrong5 == 3 %}
+                <div class="alert alert-danger" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                    <label class="form-check-label">
+                     Moisture
+                     </label>
+                </div>
+            {% else %}
+                <div class="p-3">
+                    <input class="form-check-input" type="radio" disabled>
+                    <label class="form-check-label">
+                     Moisture
+                     </label>
+                </div>
+            {% endif %}
+
+            {%if wrong5 == 0%}
+
+            {% else %}
+                 __________________________________________________________________________________________________________________________________
+                <label class="ml-3">*While the other choice may contribute to bubbles popping the main cause of popping is small particles</label>
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}

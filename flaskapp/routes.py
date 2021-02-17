@@ -54,6 +54,11 @@ def question_set_2():
 @app.route("/qsr1", methods=["GET", "POST"])
 def question_set_results_1():
     form = formqsr1
+    wrong = 0
+    wrong2 = 0
+    wrong3 = 0
+    wrong4 = 0
+    wrong5 = 0
     quest = Questions.query.all()
     correct = 0
     q1 = request.form['q11']
@@ -63,15 +68,50 @@ def question_set_results_1():
     q5 = request.form['q15']
     if q1 == quest[0].answer:
         correct += 1
+    else:
+        if q1 == '2018':
+            wrong = 1
+        elif q1 == '2020':
+            wrong = 2
+        elif q1 == '2017':
+            wrong = 3
     if q2 == quest[1].answer:
         correct += 1
+    else:
+        if q2 == '6':
+            wrong2 = 1
+        elif q2 == '12':
+            wrong2 = 2
+        elif q2 == '14':
+            wrong2 = 3
     if q3 == quest[2].answer:
         correct += 1
+    else:
+        if q3 == 'Hiroshima':
+            wrong3 = 1
+        elif q3 == 'Kyoto':
+            wrong3 = 2
+        elif q3 == 'Beijing':
+            wrong3 = 3
     if q4 == quest[3].answer:
         correct += 1
+    else:
+        if q4 == 'Pound sign':
+            wrong4 = 1
+        elif q4 == 'Four-line':
+            wrong4 = 2
+        elif q4 == 'Asterisk':
+            wrong4 = 3
     if q5 == quest[4].answer:
         correct += 1
-    return render_template('qsr1.html', correct=correct)
+    else:
+        if q5 == 'Air pressure':
+            wrong5 = 1
+        elif q5 == 'Gravity':
+            wrong5 = 2
+        elif q5 == 'Moisture':
+            wrong5 = 3
+    return render_template('qsr1.html', correct=correct, wrong=wrong, wrong2=wrong2, wrong3=wrong3, wrong4=wrong4, wrong5=wrong5)
 
 
 @app.route("/qsr2", methods=["GET", "POST"])
